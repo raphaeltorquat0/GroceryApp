@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2C23402A1D38010045714C /* RegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2C233F2A1D38010045714C /* RegistrationScreen.swift */; };
+		3F2C23432A1D41520045714C /* Swift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2C23422A1D41520045714C /* Swift+Extensions.swift */; };
 		3F601D9D2A18E36500976725 /* GroceryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F601D9C2A18E36500976725 /* GroceryAppApp.swift */; };
 		3F601D9F2A18E36500976725 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F601D9E2A18E36500976725 /* ContentView.swift */; };
 		3F601DA12A18E36800976725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F601DA02A18E36800976725 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F2C233F2A1D38010045714C /* RegistrationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreen.swift; sourceTree = "<group>"; };
+		3F2C23422A1D41520045714C /* Swift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Extensions.swift"; sourceTree = "<group>"; };
 		3F601D992A18E36500976725 /* GroceryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F601D9C2A18E36500976725 /* GroceryAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryAppApp.swift; sourceTree = "<group>"; };
 		3F601D9E2A18E36500976725 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +36,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F2C233E2A1D37B90045714C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				3F2C233F2A1D38010045714C /* RegistrationScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		3F2C23412A1D41410045714C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3F2C23422A1D41520045714C /* Swift+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		3F601D902A18E36500976725 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +71,8 @@
 		3F601D9B2A18E36500976725 /* GroceryApp */ = {
 			isa = PBXGroup;
 			children = (
+				3F2C23412A1D41410045714C /* Extensions */,
+				3F2C233E2A1D37B90045714C /* Screens */,
 				3F601D9C2A18E36500976725 /* GroceryAppApp.swift */,
 				3F601D9E2A18E36500976725 /* ContentView.swift */,
 				3F601DA02A18E36800976725 /* Assets.xcassets */,
@@ -137,6 +159,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2C23402A1D38010045714C /* RegistrationScreen.swift in Sources */,
+				3F2C23432A1D41520045714C /* Swift+Extensions.swift in Sources */,
 				3F601D9F2A18E36500976725 /* ContentView.swift in Sources */,
 				3F601D9D2A18E36500976725 /* GroceryAppApp.swift in Sources */,
 			);
