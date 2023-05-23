@@ -12,10 +12,17 @@ struct RegistrationScreen: View {
     @State private var username: String = ""
     @State private var password: String = ""
     
+    
+    
     private var isFormValid: Bool {
         !username.isEmptyOrWhiteSpace && !password.isEmptyOrWhiteSpace && (password.count >= 6 && password.count <= 10)
     }
     
+    
+    private func register() async {
+    
+    }
+
     
     var body: some View {
         Form {
@@ -24,7 +31,9 @@ struct RegistrationScreen: View {
             
             HStack {
                 Button("Register") {
-                    
+                    Task {
+                        await register()
+                    }
                 }.buttonStyle(.borderless)
                     .disabled(!isFormValid)
                 
@@ -35,6 +44,6 @@ struct RegistrationScreen: View {
 
 struct RegistrationScreen_Previews: PreviewProvider {
     static var previews: some View {
-        RegistrationScreen()
+        RegistrationScreen().environmentObject(GroceryModel())
     }
 }
