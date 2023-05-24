@@ -13,17 +13,16 @@ struct RegistrationScreen: View {
     
     @State private var username: String = ""
     @State private var password: String = ""
-    @State private var email: String = ""
     @State private var errorMessage: String = ""
     
     private var isFormValid: Bool {
-        !username.isEmptyOrWhiteSpace && !password.isEmptyOrWhiteSpace && (password.count >= 6 && password.count <= 10) && !email.isEmptyOrWhiteSpace
+        !username.isEmptyOrWhiteSpace && !password.isEmptyOrWhiteSpace && (password.count >= 6 && password.count <= 10)
     }
     
     
     private func register() async {
         do {
-            let registerResponseDTO = try await model.register(username: username, password: password, email: email)
+            let registerResponseDTO = try await model.register(username: username, password: password)
             if !registerResponseDTO.error {
                 /* take user to the login screen */
                 
@@ -40,7 +39,6 @@ struct RegistrationScreen: View {
         Form {
             TextField("Username", text: $username).textInputAutocapitalization(.never)
             SecureField("Password", text: $password).textInputAutocapitalization(.never)
-            TextField("Email", text: $email).textInputAutocapitalization(.never)
             
             HStack {
                 Button("Register") {
