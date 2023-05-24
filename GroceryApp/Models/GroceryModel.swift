@@ -11,10 +11,17 @@ class GroceryModel: ObservableObject {
     
     let httpClient = HTTPClient()
     
-    func register(username: String, password: String) async throws -> Bool {
-        let registerData = ["username": username, "password": password]
+    func register(username: String, password: String, email: String) async throws -> RegisterResponseDTO {
+        let registerData = ["username": username, "password": password, "email": email]
         let resource = try Resource(url: Constants.Urls.register, method: .post(JSONEncoder().encode(registerData)), modelType: RegisterResponseDTO.self)
         let registerResponseDTO = try await httpClient.load(resource)
-        return !registerResponseDTO.error
+        return registerResponseDTO
+    }
+    
+    func login(username: String, password: String) async throws -> LoginResponseDTO {
+        let loginData = ["username": username, "password": password]
+        let resource = try Resource(url: Constants.Urls.register, method: .post(JSONEncoder().encode(loginData)), modelType: LoginResponseDTO.self)
+        let loginResponseDTO = try await httpClient.load(resource)
+        return loginResponseDTO
     }
 }
