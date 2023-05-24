@@ -10,6 +10,7 @@ import SwiftUI
 struct RegistrationScreen: View {
     
     @EnvironmentObject private var model: GroceryModel
+    @EnvironmentObject private var appState: AppState
     
     @State private var username: String = ""
     @State private var password: String = ""
@@ -19,12 +20,12 @@ struct RegistrationScreen: View {
         !username.isEmptyOrWhiteSpace && !password.isEmptyOrWhiteSpace && (password.count >= 6 && password.count <= 10)
     }
     
-    
     private func register() async {
+        
         do {
             let registerResponseDTO = try await model.register(username: username, password: password)
             if !registerResponseDTO.error {
-                /* take user to the login screen */
+                appState.routes.append(.login)
                 
             } else {
                 errorMessage = registerResponseDTO.reason ?? ""
@@ -33,7 +34,6 @@ struct RegistrationScreen: View {
             errorMessage = error.localizedDescription
         }
     }
-
     
     var body: some View {
         Form {
@@ -47,18 +47,46 @@ struct RegistrationScreen: View {
                     }
                 }.buttonStyle(.borderless)
                     .disabled(!isFormValid)
-                
+                Spacer()
+                Button("Login") {
+                    
+                }.buttonStyle(.borderless)
             }
-            Text(errorMessage)
         }
         .navigationTitle("Registration")
+        VStack {
+            Spacer()
+            Text(errorMessage)
+            Spacer()
+        }
+    }
+}
+
+struct RegistrationScreenContainerView: View {
+    @StateObject private var model = GroceryModel()
+    @StateObject private var appState = AppState()
+    
+    var body: some View {
+        NavigationStack(path: $appState.routes) {
+            RegistrationScreen()
+                .navigationDestination(for: Route.self) { route in
+                    switch route {
+                    case .register:
+                        RegistrationScreen()
+                    case .login:
+                        LoginScreen()
+                    case .groceryCategoryList:
+                        Text("Grocery Category List is comming.")
+                    }
+                }
+        }
+        .environmentObject(model)
+        .environmentObject(appState)
     }
 }
 
 struct RegistrationScreen_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
-            RegistrationScreen().environmentObject(GroceryModel())
-        }
+        RegistrationScreenContainerView()
     }
 }

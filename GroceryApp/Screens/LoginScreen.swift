@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoginScreen: View {
     @EnvironmentObject private var model: GroceryModel
+    @EnvironmentObject private var appState: AppState
     
     @State private var username: String = ""
     @State private var password: String = ""
@@ -20,6 +21,8 @@ struct LoginScreen: View {
             let loginResponseDTO = try await model.login(username: username, password: password)
             if loginResponseDTO.error {
                 errorMessage = loginResponseDTO.reason ?? ""
+            } else {
+                appState.routes.append(.groceryCategoryList)
             }
         } catch {
             errorMessage = error.localizedDescription
@@ -51,7 +54,10 @@ struct LoginScreen: View {
 struct LoginScreen_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            LoginScreen().environmentObject(GroceryModel())
+            LoginScreen()
+                .environmentObject(GroceryModel())
+                .environmentObject(AppState())
         }
     }
 }
+
