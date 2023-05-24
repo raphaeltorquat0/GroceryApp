@@ -16,6 +16,7 @@
 		3F2C23502A1D656D0045714C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2C234F2A1D656D0045714C /* Constants.swift */; };
 		3F2C23522A1D74020045714C /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2C23512A1D74020045714C /* LoginScreen.swift */; };
 		3F2C23542A1D75C20045714C /* LoginResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2C23532A1D75C20045714C /* LoginResponseDTO.swift */; };
+		3F2C23562A1E83750045714C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2C23552A1E83750045714C /* AppState.swift */; };
 		3F601D9D2A18E36500976725 /* GroceryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F601D9C2A18E36500976725 /* GroceryAppApp.swift */; };
 		3F601D9F2A18E36500976725 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F601D9E2A18E36500976725 /* ContentView.swift */; };
 		3F601DA12A18E36800976725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F601DA02A18E36800976725 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		3F2C234F2A1D656D0045714C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3F2C23512A1D74020045714C /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		3F2C23532A1D75C20045714C /* LoginResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDTO.swift; sourceTree = "<group>"; };
+		3F2C23552A1E83750045714C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		3F601D992A18E36500976725 /* GroceryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F601D9C2A18E36500976725 /* GroceryAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryAppApp.swift; sourceTree = "<group>"; };
 		3F601D9E2A18E36500976725 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				3F2C234A2A1D62D80045714C /* GroceryModel.swift */,
 				3F2C234C2A1D65020045714C /* RegisterResponseDTO.swift */,
 				3F2C23532A1D75C20045714C /* LoginResponseDTO.swift */,
+				3F2C23552A1E83750045714C /* AppState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				3F2C23402A1D38010045714C /* RegistrationScreen.swift in Sources */,
 				3F2C234B2A1D62D80045714C /* GroceryModel.swift in Sources */,
 				3F2C23462A1D49AF0045714C /* HTTPClient.swift in Sources */,
+				3F2C23562A1E83750045714C /* AppState.swift in Sources */,
 				3F2C23432A1D41520045714C /* Swift+Extensions.swift in Sources */,
 				3F2C23482A1D4C790045714C /* NetworkError+Extensions.swift in Sources */,
 				3F601D9F2A18E36500976725 /* ContentView.swift in Sources */,
