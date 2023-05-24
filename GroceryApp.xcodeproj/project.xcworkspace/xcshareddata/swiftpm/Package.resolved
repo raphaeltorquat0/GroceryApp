@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "groceryappshareddto",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/raphaeltorquat0/GroceryAppSharedDTO.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "b30a3762a45047174e782b87ef382ed80cba8be7"
+      }
+    }
+  ],
+  "version" : 2
+}
