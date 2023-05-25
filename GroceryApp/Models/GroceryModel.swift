@@ -23,14 +23,19 @@ class GroceryModel: ObservableObject {
         let loginData = ["username": username, "password": password]
         let resource = try Resource(url: Constants.Urls.login, method: .post(JSONEncoder().encode(loginData)), modelType: LoginResponseDTO.self)
         let loginResponseDTO = try await httpClient.load(resource)
-        
-        
         guard case loginResponseDTO.token = loginResponseDTO.token, case loginResponseDTO.userId?.uuidString = loginResponseDTO.userId?.uuidString else { return loginResponseDTO }
-            
             let defaults = UserDefaults.standard
             defaults.set(loginResponseDTO.token, forKey: "authToken")
             defaults.set(loginResponseDTO.userId?.uuidString, forKey: "userId")
             return loginResponseDTO
+    }
+    
+    func saveGroceryCategory(_ groceryCategoryRequestDTO: GroceryCategoryRequestDTO) async throws {
+        guard let userId = UserDefaults.standard.userId else {
+            return
+        }
         
+        let resource = try Resource(url: Constants.Urls.saveGroceryCategory(userId: userId), method: .post(JSONEncoder().encode(groceryCategoryRequestDTO)), modelType: GroceryCategoryResponseDTO.self)
+        let newGroceryCategory = try await httpClient.load(resource)
     }
 }
