@@ -49,16 +49,12 @@ struct RegistrationScreen: View {
                     .disabled(!isFormValid)
                 Spacer()
                 Button("Login") {
-                    
+                    appState.routes.append(.login)
                 }.buttonStyle(.borderless)
             }
+            Text(errorMessage)
         }
         .navigationTitle("Registration")
-        VStack {
-            Spacer()
-            Text(errorMessage)
-            Spacer()
-        }
     }
 }
 

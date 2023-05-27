@@ -15,7 +15,7 @@ struct GroceryAppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationStack{
+            NavigationStack(path: $appState.routes) {
                 RegistrationScreen()
                     .navigationDestination(for: Route.self) { route in
                         switch route {

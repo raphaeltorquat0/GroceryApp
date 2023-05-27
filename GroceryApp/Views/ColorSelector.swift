@@ -23,7 +23,7 @@ struct ColorSelector: View {
         HStack {
             ForEach(Colors.allCases, id: \.rawValue) { color in
                 VStack {
-                    Image(systemName: colorCode == color.rawValue ? "record.circle.fill" : "circle.fill")
+                    Image(systemName:colorCode == color.rawValue ? "record.circle.fill" : "circle.fill")
                         .font(.title)
                         .foregroundColor(Color.fromHex(color.rawValue))
                         .clipShape(Circle())

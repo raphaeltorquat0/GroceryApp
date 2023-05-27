@@ -44,7 +44,8 @@ struct LoginScreen: View {
                     Task {
                         await login()
                     }
-                }.buttonStyle(.borderless).disabled(!isFormValid)
+                }.buttonStyle(.borderless)
+                    .disabled(!isFormValid)
             }
             Text(errorMessage)
         }.navigationTitle("Login")
