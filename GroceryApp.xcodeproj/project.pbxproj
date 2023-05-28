@@ -21,12 +21,14 @@
 		3F601DA42A18E36800976725 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F601DA32A18E36800976725 /* Preview Assets.xcassets */; };
 		3F92E2B52A22980100A9E6F9 /* GroceryDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F92E2B42A22980100A9E6F9 /* GroceryDetailScreen.swift */; };
 		3F92E2B72A22987100A9E6F9 /* AddGroceryItemScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F92E2B62A22987100A9E6F9 /* AddGroceryItemScreen.swift */; };
+		3F92E2B92A22B32E00A9E6F9 /* GroceryItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F92E2B82A22B32E00A9E6F9 /* GroceryItemListView.swift */; };
+		3F92E2BB2A22B3D900A9E6F9 /* GroceryItemResponseDTO+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F92E2BA2A22B3D900A9E6F9 /* GroceryItemResponseDTO+Extensions.swift */; };
 		3F9D62092A1E92F6005EEB5C /* GroceryAppSharedDTO in Frameworks */ = {isa = PBXBuildFile; productRef = 3F9D62082A1E92F6005EEB5C /* GroceryAppSharedDTO */; };
 		3FDED4FE2A1F998B0017681F /* ColorSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDED4FD2A1F998A0017681F /* ColorSelector.swift */; };
-		3FDED5002A1FA60D0017681F /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDED4FF2A1FA60D0017681F /* Color+Extension.swift */; };
+		3FDED5002A1FA60D0017681F /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDED4FF2A1FA60D0017681F /* Color+Extensions.swift */; };
 		3FDED5022A1FFA480017681F /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDED5012A1FFA480017681F /* UserDefaults+Extensions.swift */; };
 		3FDED5042A200B8F0017681F /* GroceryCategoryListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDED5032A200B8F0017681F /* GroceryCategoryListScreen.swift */; };
-		3FDED5062A200D590017681F /* GroceryCategoryResponseDTO+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDED5052A200D590017681F /* GroceryCategoryResponseDTO+Extension.swift */; };
+		3FDED5062A200D590017681F /* GroceryCategoryResponseDTO+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDED5052A200D590017681F /* GroceryCategoryResponseDTO+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,11 +47,13 @@
 		3F601DA32A18E36800976725 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3F92E2B42A22980100A9E6F9 /* GroceryDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryDetailScreen.swift; sourceTree = "<group>"; };
 		3F92E2B62A22987100A9E6F9 /* AddGroceryItemScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGroceryItemScreen.swift; sourceTree = "<group>"; };
+		3F92E2B82A22B32E00A9E6F9 /* GroceryItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemListView.swift; sourceTree = "<group>"; };
+		3F92E2BA2A22B3D900A9E6F9 /* GroceryItemResponseDTO+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GroceryItemResponseDTO+Extensions.swift"; sourceTree = "<group>"; };
 		3FDED4FD2A1F998A0017681F /* ColorSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelector.swift; sourceTree = "<group>"; };
-		3FDED4FF2A1FA60D0017681F /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		3FDED4FF2A1FA60D0017681F /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		3FDED5012A1FFA480017681F /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 		3FDED5032A200B8F0017681F /* GroceryCategoryListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryCategoryListScreen.swift; sourceTree = "<group>"; };
-		3FDED5052A200D590017681F /* GroceryCategoryResponseDTO+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GroceryCategoryResponseDTO+Extension.swift"; sourceTree = "<group>"; };
+		3FDED5052A200D590017681F /* GroceryCategoryResponseDTO+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GroceryCategoryResponseDTO+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +86,10 @@
 			children = (
 				3F2C23422A1D41520045714C /* String+Extensions.swift */,
 				3F2C23472A1D4C790045714C /* NetworkError+Extensions.swift */,
-				3FDED4FF2A1FA60D0017681F /* Color+Extension.swift */,
+				3FDED4FF2A1FA60D0017681F /* Color+Extensions.swift */,
 				3FDED5012A1FFA480017681F /* UserDefaults+Extensions.swift */,
-				3FDED5052A200D590017681F /* GroceryCategoryResponseDTO+Extension.swift */,
+				3FDED5052A200D590017681F /* GroceryCategoryResponseDTO+Extensions.swift */,
+				3F92E2BA2A22B3D900A9E6F9 /* GroceryItemResponseDTO+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				3FDED4FD2A1F998A0017681F /* ColorSelector.swift */,
+				3F92E2B82A22B32E00A9E6F9 /* GroceryItemListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -246,11 +252,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FDED5002A1FA60D0017681F /* Color+Extension.swift in Sources */,
+				3FDED5002A1FA60D0017681F /* Color+Extensions.swift in Sources */,
 				3F2C23402A1D38010045714C /* RegistrationScreen.swift in Sources */,
 				3F92E2B72A22987100A9E6F9 /* AddGroceryItemScreen.swift in Sources */,
 				3F92E2B52A22980100A9E6F9 /* GroceryDetailScreen.swift in Sources */,
 				3FDED5042A200B8F0017681F /* GroceryCategoryListScreen.swift in Sources */,
+				3F92E2B92A22B32E00A9E6F9 /* GroceryItemListView.swift in Sources */,
 				3F2C234B2A1D62D80045714C /* GroceryModel.swift in Sources */,
 				3F2C23462A1D49AF0045714C /* HTTPClient.swift in Sources */,
 				3FDED5022A1FFA480017681F /* UserDefaults+Extensions.swift in Sources */,
@@ -259,8 +266,9 @@
 				3F51D9542A1EDAA400D173A0 /* AddGroceryCategoryScreen.swift in Sources */,
 				3F2C23482A1D4C790045714C /* NetworkError+Extensions.swift in Sources */,
 				3F601D9D2A18E36500976725 /* GroceryAppApp.swift in Sources */,
-				3FDED5062A200D590017681F /* GroceryCategoryResponseDTO+Extension.swift in Sources */,
+				3FDED5062A200D590017681F /* GroceryCategoryResponseDTO+Extensions.swift in Sources */,
 				3F2C23502A1D656D0045714C /* Constants.swift in Sources */,
+				3F92E2BB2A22B3D900A9E6F9 /* GroceryItemResponseDTO+Extensions.swift in Sources */,
 				3FDED4FE2A1F998B0017681F /* ColorSelector.swift in Sources */,
 				3F2C23522A1D74020045714C /* LoginScreen.swift in Sources */,
 			);

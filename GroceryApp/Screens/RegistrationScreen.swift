@@ -73,6 +73,8 @@ struct RegistrationScreenContainerView: View {
                         LoginScreen()
                     case .groceryCategoryList:
                         Text("Grocery Category List is comming.")
+                    case .groceryCategoryDetail(let groceryCategory):
+                        GroceryDetailScreen(groceryCategory: groceryCategory)
                     }
                 }
         }

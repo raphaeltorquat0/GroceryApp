@@ -14,10 +14,20 @@ struct GroceryDetailScreen: View {
     @State private var isPresented: Bool = false
     @EnvironmentObject private var model: GroceryModel
     
+    private func populateGroceryItems() async {
+        do {
+            try await model.populateGroceryItemsBy(groceryCategoryId: groceryCategory.id)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
     var body: some View {
         VStack {
-            List(1...20, id: \.self) { index in
-                Text("Grocery Item \(index)")
+            if model.groceryItems.isEmpty {
+                Text("No items found")
+            } else {
+              GroceryItemListView(groceryItems: model.groceryItems)
             }
         }.navigationTitle(groceryCategory.title)
             .toolbar {
@@ -33,6 +43,8 @@ struct GroceryDetailScreen: View {
             }
             .onAppear {
                 model.groceryCategory = groceryCategory
+            }.task {
+                await populateGroceryItems()
             }
     }
 }
@@ -40,7 +52,7 @@ struct GroceryDetailScreen: View {
 struct GroceryDetailScreen_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            GroceryDetailScreen(groceryCategory: GroceryCategoryResponseDTO(id: UUID(), title: "Beverages", colorCode: "#3498db"))
+            GroceryDetailScreen(groceryCategory: GroceryCategoryResponseDTO(id: UUID(uuidString: "dcfa5777-81b0-471c-b24e-5485063a5db9")!, title: "Beverages", colorCode: "#3498db"))
                 .environmentObject(GroceryModel())
         }
     }
